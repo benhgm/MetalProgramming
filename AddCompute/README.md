@@ -15,3 +15,7 @@ This CPU method will involve a for-loop through each element of the arrays, whil
 |    30000   |     0.01129s    |      0.04184s   |
 |   300000   |     0.10645s    |      0.04379s   |
 |  3000000   |     1.03346s    |      0.04999s   |
+
+We can observe two things here:
+1. At small data sizes, the CPU is more efficient than the GPU in computing. This is expected, as the CPU has higher computing power per thread compared to the GPU, while the GPU has much more threads than the CPU, but each thread has low computing power.
+2. As the data size increases, we see the time the GPU takes to compute decreases, while the time taken by the CPU increases. This is due to the GPU utilising all its threads to perform the computations in parallel, as opposed to the CPU performing each computation in series.
