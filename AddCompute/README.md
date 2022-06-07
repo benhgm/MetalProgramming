@@ -1,0 +1,17 @@
+# Project Repository AddCompute Function using GPU Programming with Metal Shading Language
+This is a repository for writing a function to perform elemental addition of two arrays using metal shading language
+This code is directly taken from [this youtube tutorial](https://www.youtube.com/watch?v=VQK28rRK6OU&t=879s)
+
+This mini project compares the time taken to perform elemental addition of two arrays between a CPU and GPU
+This CPU method will involve a for-loop through each element of the arrays, while the GPU method will perform direct elemental addition by assigning threads to each element in the arrays.
+
+## Comparing compute times between CPU and GPU method
+| Array Size | CPU Method Time | GPU Method Time |
+|   :---:    |      :---:      |      :---:      |
+|     3      |     0.00002s    |      0.09023s   |
+|     30     |     0.00003s    |      0.06043s   |
+|     300    |     0.00012s    |      0.02903s   |
+|     3000   |     0.00105s    |      0.05356s   |
+|    30000   |     0.01129s    |      0.04184s   |
+|   300000   |     0.10645s    |      0.04379s   |
+|  3000000   |     1.03346s    |      0.04999s   |
